@@ -1,0 +1,10 @@
+# ninja log v5
+0	13	0	clean	9992afb1f91dc381
+1	653	6515343410120070	CMakeFiles/assignment01.dir/assignment01.obj	a50c5476007a89f4
+654	1107	6515343414461647	assignment01.exe	9d3d1fb07192cbba
+0	12	0	clean	9992afb1f91dc381
+0	566	6515344276563883	CMakeFiles/assignment01.dir/assignment01.obj	a50c5476007a89f4
+567	817	6515344278538190	assignment01.exe	9d3d1fb07192cbba
+0	12	0	clean	9992afb1f91dc381
+1	575	6515348619029741	CMakeFiles/assignment01.dir/assignment01.obj	a50c5476007a89f4
+576	835	6515348621138535	assignment01.exe	9d3d1fb07192cbba
