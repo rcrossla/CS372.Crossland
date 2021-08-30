@@ -1,0 +1,3 @@
+C:/Users/Rachel Crossland/Desktop/GitHub/CS372.Crossland/apps/assignment02/windows/CMakeFiles/assignment02.dir
+C:/Users/Rachel Crossland/Desktop/GitHub/CS372.Crossland/apps/assignment02/windows/CMakeFiles/ALL_BUILD.dir
+C:/Users/Rachel Crossland/Desktop/GitHub/CS372.Crossland/apps/assignment02/windows/CMakeFiles/ZERO_CHECK.dir

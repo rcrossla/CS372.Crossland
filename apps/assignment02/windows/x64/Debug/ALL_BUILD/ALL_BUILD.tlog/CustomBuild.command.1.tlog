@@ -1,0 +1,10 @@
+^C:\USERS\RACHEL CROSSLAND\DESKTOP\GITHUB\CS372.CROSSLAND\APPS\ASSIGNMENT02\CMAKELISTS.TXT
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" "-SC:/Users/Rachel Crossland/Desktop/GitHub/CS372.Crossland/apps/assignment02" "-BC:/Users/Rachel Crossland/Desktop/GitHub/CS372.Crossland/apps/assignment02/windows" --check-stamp-file "C:/Users/Rachel Crossland/Desktop/GitHub/CS372.Crossland/apps/assignment02/windows/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
