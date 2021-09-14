@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: listtest
+# Project: assignment03
 # Configurations: Debug
 # =============================================================================
 
@@ -35,48 +35,48 @@ CONFIGURATION = Debug
 include CMakeFiles\rules.ninja
 
 # =============================================================================
-# Object build statements for EXECUTABLE target listtest
+# Object build statements for EXECUTABLE target assignment03
 
 
 #############################################
-# Order-only phony target for listtest
+# Order-only phony target for assignment03
 
-build cmake_object_order_depends_target_listtest: phony || CMakeFiles\listtest.dir
+build cmake_object_order_depends_target_assignment03: phony || CMakeFiles\assignment03.dir
 
-build CMakeFiles\listtest.dir\listtest.obj: CXX_COMPILER__listtest_Debug ..\..\..\listtest.cpp || cmake_object_order_depends_target_listtest
+build CMakeFiles\assignment03.dir\assignment03.obj: CXX_COMPILER__assignment03_Debug ..\..\..\assignment03.cpp || cmake_object_order_depends_target_assignment03
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
   INCLUDES = -I..\..\..\..\..\include
-  OBJECT_DIR = CMakeFiles\listtest.dir
-  OBJECT_FILE_DIR = CMakeFiles\listtest.dir
-  TARGET_COMPILE_PDB = CMakeFiles\listtest.dir\
-  TARGET_PDB = listtest.pdb
+  OBJECT_DIR = CMakeFiles\assignment03.dir
+  OBJECT_FILE_DIR = CMakeFiles\assignment03.dir
+  TARGET_COMPILE_PDB = CMakeFiles\assignment03.dir\
+  TARGET_PDB = assignment03.pdb
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target listtest
+# Link build statements for EXECUTABLE target assignment03
 
 
 #############################################
-# Link the executable listtest.exe
+# Link the executable assignment03.exe
 
-build listtest.exe: CXX_EXECUTABLE_LINKER__listtest_Debug CMakeFiles\listtest.dir\listtest.obj
+build assignment03.exe: CXX_EXECUTABLE_LINKER__assignment03_Debug CMakeFiles\assignment03.dir\assignment03.obj
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
-  OBJECT_DIR = CMakeFiles\listtest.dir
+  OBJECT_DIR = CMakeFiles\assignment03.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = CMakeFiles\listtest.dir\
-  TARGET_FILE = listtest.exe
-  TARGET_IMPLIB = listtest.lib
-  TARGET_PDB = listtest.pdb
+  TARGET_COMPILE_PDB = CMakeFiles\assignment03.dir\
+  TARGET_FILE = assignment03.exe
+  TARGET_IMPLIB = assignment03.lib
+  TARGET_PDB = assignment03.pdb
 
 
 #############################################
 # Utility command for edit_cache
 
 build CMakeFiles\edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\Users\Rachel Crossland\Desktop\GitHub\CS372.Crossland\apps\listtest\out\build\windows-default" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Rachel Crossland\Desktop\GitHub\CS372.Crossland\apps\assignment03\out\build\windows-default" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -87,7 +87,7 @@ build edit_cache: phony CMakeFiles\edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\Users\Rachel Crossland\Desktop\GitHub\CS372.Crossland\apps\listtest\out\build\windows-default" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -S"C:\Users\Rachel Crossland\Desktop\GitHub\CS372.Crossland\apps\listtest" -B"C:\Users\Rachel Crossland\Desktop\GitHub\CS372.Crossland\apps\listtest\out\build\windows-default""
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Rachel Crossland\Desktop\GitHub\CS372.Crossland\apps\assignment03\out\build\windows-default" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -S"C:\Users\Rachel Crossland\Desktop\GitHub\CS372.Crossland\apps\assignment03" -B"C:\Users\Rachel Crossland\Desktop\GitHub\CS372.Crossland\apps\assignment03\out\build\windows-default""
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -97,7 +97,7 @@ build rebuild_cache: phony CMakeFiles\rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
-build listtest: phony listtest.exe
+build assignment03: phony assignment03.exe
 
 # =============================================================================
 # Folder targets.
@@ -105,9 +105,9 @@ build listtest: phony listtest.exe
 # =============================================================================
 
 #############################################
-# Folder: C:/Users/Rachel Crossland/Desktop/GitHub/CS372.Crossland/apps/listtest/out/build/windows-default
+# Folder: C:/Users/Rachel Crossland/Desktop/GitHub/CS372.Crossland/apps/assignment03/out/build/windows-default
 
-build all: phony listtest.exe
+build all: phony assignment03.exe
 
 # =============================================================================
 # Unknown Build Time Dependencies.
