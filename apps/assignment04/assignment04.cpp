@@ -1,19 +1,36 @@
 
 #include <iostream>
 #include <fstream>
-#include "./Vector.h"
+#include <vector>
 using namespace std;
 
 
-
+void function(int);
+int display();
 
 int main()
 {
-	ofstream myfile;
+	ofstream inputFile;
 
-	myfile.open("tasks.txt");
+	inputFile.open("tasks.txt");
 	int number = 0;
+	string str;
 
+	while (getline(cin, str))
+	{
+		if (str.size() > 0)
+		{
+			vector.push_back(str);
+		}
+	}
+
+
+	
+
+
+}
+int display()
+{
 	do
 	{
 		cout << "Select a number: " << endl << endl;
@@ -26,12 +43,52 @@ int main()
 
 	} while (number < 1 || number > 4);
 
-
+	return number;
 }
-
-void function()
+void function(int num)
 {
+	int choice = 0;
+	string line = "";
 
+	
+	switch(num)
+	{
+		case 1:
+		{
+			while (!inputFile.eof())
+			{
+				cout << getline(inputFile, line) << endl;
+			}
+		}
+		case 2:
+		{
+			
+			cout << "Which item would you like to view: ";
+			cin >> choice;
+
+			cout << endl << endl;
+
+			cout << vector.at(choice);
+
+		}
+		case 3:
+		{
+			cout << "Which task is done: ";
+			cin >> choice;
+
+			if (vector.at(choice) == 'U')
+			{
+				vector.at(choice) = 'D';
+			}
+
+
+		}
+		default: 
+		{
+
+		}
+
+	}
 
 
 
