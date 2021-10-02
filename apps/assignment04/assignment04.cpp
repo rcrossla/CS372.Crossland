@@ -12,7 +12,6 @@ void setChar(int, vector<string>*);
 void updateFile(vector<string>, fstream *);
 
 
-
 int main()
 {
 	vector<string> vec;
