@@ -67,6 +67,7 @@ void function(int num, vector<string> vec)
 	{
 		case 1:
 		{
+
 			cout << "case 1 opens";
 			
 			for(int i = 0; i < vec.size(); i++)
