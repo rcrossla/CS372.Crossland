@@ -6,33 +6,44 @@
 using namespace std;
 
 
-void function(int, vector<string>);
+void function(int, vector<string>*);
 int display();
-void set(string);
+void setChar(int, vector<string>*);
+void updateFile(vector<string>, fstream *);
 
-vector<string> vec;
+
 
 int main()
 {
-	ifstream inputFile;
+	vector<string> vec;
+	fstream inputFile;
 
-	inputFile.open("tasks.txt");
+	inputFile.open("tasks.txt", ios::in | ios::out);
 
 	int num = 0;
 	string str;
 
 	if (inputFile)
 	{
-
-		while(getline(inputFile,str))
+		
+		while(!inputFile.eof())
 		{
+			getline(inputFile, str);
 			vec.push_back(str);
 		}
 
 		inputFile.close();
+		
+		while (num != 4)
+		{
+			num = display();
+			function(num, &vec);
+		}
 
-		num = display();
-		function(num, vec);
+		inputFile.open("tasks.txt", ios::in | ios:: out);
+
+		updateFile(vec, &inputFile);
+		inputFile.close();
 	}
 	else
 	{
@@ -58,23 +69,23 @@ int display()
 
 	return number;
 }
-void function(int num, vector<string> vec)
+
+void function(int num, vector<string> *vec)
 {
 	int choice = 0;
-	string line = "";
 		
 	switch(num)
 	{
 		case 1:
 		{
 
-			cout << "case 1 opens";
+			cout << "case 1 opens" << endl;
 			
-			for(int i = 0; i < vec.size(); i++)
+			for(vector<string>::iterator i = vec->begin(); i != vec->end(); ++i)
 			{
-				
-				cout << vec[i] << endl;
+				cout << *i << endl;
 			}
+			cout << endl << endl;
 			break;
 		}
 		case 2:
@@ -84,38 +95,56 @@ void function(int num, vector<string> vec)
 
 			cout << endl << endl;
 
-			cout << vec[choice];
+			choice -= 1;
+			cout << (*vec)[choice];
+
+			cout << endl << endl;
 
 			break;
 		}
 		case 3:
 		{
+			string line = "";
 			cout << "Which task is done: ";
 			cin >> choice;
 
 			choice -= 1;
-			line = vec[choice];
-
-			set(line);
+			setChar(choice, vec);
 
 			break;
 		}
 		default: 
 		{
-			exit(0);
+			num = 4;
 		}
 	}
 }
 
-void set(string line)
+void updateFile(vector<string> vec, fstream *inputFile)
 {
-	for (int i = 0; i < line.size(); i++)
+	for (vector<string>::iterator i = vec.begin(); i != vec.end(); ++i)
 	{
-		if (line[i] == 'U')
+		cout << *i << endl;
+		*inputFile << *i << endl;
+	}
+	
+}
+
+void setChar(int choice, vector<string> *vec)
+{
+	string tmpString = (*vec)[choice];
+
+	cout << "mark as done" << endl;
+	for (int i = 0; i < tmpString.length(); i++)
+	{
+		if (tmpString[i] == 'U')
 		{
-			line[i] = 'D';
+			tmpString[i] = 'D';
 		}
 	}
 
+	(*vec)[choice] = tmpString;
+
+	
 }
 
