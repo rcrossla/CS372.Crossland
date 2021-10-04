@@ -37,6 +37,8 @@ int main()
 		{
 			num = display();
 			function(num, &vec);
+
+			cout << "-------------------------------------------" << endl << endl;
 		}
 
 		inputFile.open("tasks.txt", ios::in | ios:: out);
@@ -56,15 +58,18 @@ int display()
 	int number = 0;
 	do
 	{
-		cout << "Select a number: " << endl << endl;
+		
 		cout << "1) Display all items" << endl;
 		cout << "2) Display selected item" << endl;
 		cout << "3) Mark a task as done" << endl;
-		cout << "4) Exit program" << endl;
+		cout << "4) Exit program" << endl << endl;
+		cout << "Select a number: ";
 
 		cin >> number;
 
 	} while (number < 1 || number > 4);
+
+	cout << endl << endl;
 
 	return number;
 }
@@ -78,8 +83,6 @@ void function(int num, vector<string> *vec)
 		case 1:
 		{
 
-			cout << "case 1 opens" << endl;
-			
 			for(vector<string>::iterator i = vec->begin(); i != vec->end(); ++i)
 			{
 				cout << *i << endl;
@@ -133,7 +136,8 @@ void setChar(int choice, vector<string> *vec)
 {
 	string tmpString = (*vec)[choice];
 
-	cout << "mark as done" << endl;
+	cout << "Task number: " << (choice+1) << " is now marked done." << endl << endl;
+
 	for (int i = 0; i < tmpString.length(); i++)
 	{
 		if (tmpString[i] == 'U')
