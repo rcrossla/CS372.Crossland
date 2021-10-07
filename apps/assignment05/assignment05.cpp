@@ -7,7 +7,7 @@ void iterative(int, int, int, int);
 
 int main()
 {
-	const int NUMDISKS = 4;
+	const int NUMDISKS = 3;
 	const int FROMPEG = 1;
 	const int TOPEG = 3;
 	const int TEMPPEG = 2;
@@ -33,22 +33,33 @@ void moveDisks(int num, int fromPeg, int toPeg, int tempPeg) {
 void iterative(int num, int fromPeg, int toPeg, int tempPeg) {
 
 	if (num % 2 == 0) {
-		
-		for (int i = num; i >= 0; i--) {
+
+		for (int i = num; i >= 0; --i)
+		{
+
 			cout << "even" << endl;
 			cout << "Move a disk from peg " << fromPeg << " to peg " << tempPeg << endl;
-			cout << "Move a disk from peg " << fromPeg << " to peg " << toPeg << endl; 
+			cout << "Move a disk from peg " << fromPeg << " to peg " << toPeg << endl;
 			cout << "Move a disk from peg " << tempPeg << " to peg " << toPeg << endl;
 		}
 	}
-	else{
-		for (int i = num; i >= 0; i--) {
+	else {
+	
+		for (int i = num; i >= 0; --i)
+		{
 
 			cout << "Move a disk from peg " << fromPeg << " to peg " << toPeg << endl;
 			cout << "Move a disk from peg " << fromPeg << " to peg " << tempPeg << endl;
-			cout << "Move a disk from peg " << tempPeg << " to peg " << toPeg << endl;
+			cout << "Move a disk from peg " << toPeg << " to peg " << tempPeg << endl;
+			cout << "Move a disk from peg " << fromPeg << " to peg " << toPeg << endl;
+
+			cout << "Move a disk from peg " << tempPeg << " to peg " << fromPeg << endl;
+			cout << "Move a disk from peg " << tempPeg << " to peg " << toPeg << endl;	
+			cout << "Move a disk from peg " << fromPeg << " to peg " << toPeg << endl;
+
 		}
-
 	}
-
+	
+	
 }
+
