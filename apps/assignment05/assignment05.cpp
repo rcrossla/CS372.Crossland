@@ -48,6 +48,7 @@ void iterative(int num, int fromPeg, int toPeg, int tempPeg) {
 		for (int i = num; i >= 0; --i)
 		{
 
+
 			cout << "Move a disk from peg " << fromPeg << " to peg " << toPeg << endl;
 			cout << "Move a disk from peg " << fromPeg << " to peg " << tempPeg << endl;
 			cout << "Move a disk from peg " << toPeg << " to peg " << tempPeg << endl;
