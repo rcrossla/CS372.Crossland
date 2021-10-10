@@ -64,7 +64,7 @@ void moveDisks(int num, int fromPeg, int toPeg, int tempPeg) {
 
 	if (num > 0) {
 		moveDisks(num - 1, fromPeg, tempPeg, toPeg);
-		//cout << "Move a disk from peg " << fromPeg << " to peg " << toPeg << endl;
+		cout << "Move a disk from peg " << fromPeg << " to peg " << toPeg << endl;
 		moveDisks(num - 1, tempPeg, toPeg, fromPeg);
 	}
 }
@@ -86,11 +86,11 @@ void iterative(int num, int fromPeg, int toPeg, int tempPeg) {
 
 				if (flag == 1)
 				{
-					//cout << "Move a disk from peg " << fromPeg << " to peg " << tempPeg << endl;
+					cout << "Move a disk from peg " << fromPeg << " to peg " << tempPeg << endl;
 				}
 				else
 				{
-					//cout << "Move a disk from peg " << tempPeg << " to peg " << fromPeg << endl;
+					cout << "Move a disk from peg " << tempPeg << " to peg " << fromPeg << endl;
 
 				}
 			}
@@ -100,11 +100,11 @@ void iterative(int num, int fromPeg, int toPeg, int tempPeg) {
 
 				if (flag == 1)
 				{
-					//cout << "Move a disk from peg " << fromPeg << " to peg " << toPeg << endl;
+					cout << "Move a disk from peg " << fromPeg << " to peg " << toPeg << endl;
 				}
 				else
 				{
-					//cout << "Move a disk from peg " << toPeg << " to peg " << fromPeg << endl;
+					cout << "Move a disk from peg " << toPeg << " to peg " << fromPeg << endl;
 				}
 
 
@@ -115,11 +115,11 @@ void iterative(int num, int fromPeg, int toPeg, int tempPeg) {
 
 				if (flag == 1)
 				{
-					//cout << "Move a disk from peg " << tempPeg << " to peg " << toPeg << endl;
+					cout << "Move a disk from peg " << tempPeg << " to peg " << toPeg << endl;
 				}
 				else
 				{
-					//cout << "Move a disk from peg " << toPeg << " to peg " << tempPeg << endl;
+					cout << "Move a disk from peg " << toPeg << " to peg " << tempPeg << endl;
 				}
 			}
 		}
@@ -134,11 +134,11 @@ void iterative(int num, int fromPeg, int toPeg, int tempPeg) {
 
 				if (flag == 1)
 				{
-					//cout << "Move a disk from peg " << fromPeg << " to peg " << toPeg << endl;
+					cout << "Move a disk from peg " << fromPeg << " to peg " << toPeg << endl;
 				}
 				else
 				{
-					//cout << "Move a disk from peg " << toPeg << " to peg " << fromPeg << endl;
+					cout << "Move a disk from peg " << toPeg << " to peg " << fromPeg << endl;
 				}
 			}
 			if (i % 3 == 2)
@@ -147,11 +147,11 @@ void iterative(int num, int fromPeg, int toPeg, int tempPeg) {
 
 				if (flag == 1)
 				{
-					//cout << "Move a disk from peg " << fromPeg << " to peg " << tempPeg << endl;
+					cout << "Move a disk from peg " << fromPeg << " to peg " << tempPeg << endl;
 				}
 				else
 				{
-					//cout << "Move a disk from peg " << tempPeg << " to peg " << fromPeg << endl;
+					cout << "Move a disk from peg " << tempPeg << " to peg " << fromPeg << endl;
 				}
 			}
 			if (i % 3 == 0)
@@ -160,11 +160,11 @@ void iterative(int num, int fromPeg, int toPeg, int tempPeg) {
 
 				if (flag == 1)
 				{
-					//cout << "Move a disk from peg " << tempPeg << " to peg " << toPeg << endl;
+					cout << "Move a disk from peg " << tempPeg << " to peg " << toPeg << endl;
 				}
 				else
 				{
-					//cout << "Move a disk from peg " << toPeg << " to peg " << tempPeg << endl;
+					cout << "Move a disk from peg " << toPeg << " to peg " << tempPeg << endl;
 				}
 
 			}
