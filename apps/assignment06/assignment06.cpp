@@ -25,7 +25,6 @@ int main()
 	double sum = 0.0;
 
 
-
 	cout << left << setw(20) << "For array size" << setw(50) << "Average time to find duplicate" << endl << endl;
 	
 	for (int x = 0; x <= 7; x++)
