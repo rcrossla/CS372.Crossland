@@ -85,8 +85,8 @@ int main(int argc, const char* argv[]) {
     cout << "tree: ";
     st->aTree2.inorder(f2);
     cout << endl;
-    // part 4
 
+    // part 4
     int randNum = 0;
     double vecTime, treeTime = 0.0;
 
@@ -133,9 +133,10 @@ int main(int argc, const char* argv[]) {
             {
                 if (treePtr->aTree2.member(vec.at(i)))
                 {
-                    x = treePtr->numElements;
+                    x = treePtr->numElements; 
                 }
             }
+
             auto end = chrono::steady_clock::now();
             chrono::duration<double> elapsed_seconds = end - start;
             treeTime += elapsed_seconds.count();
