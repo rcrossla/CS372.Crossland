@@ -15,9 +15,11 @@
 #include <memory>
 #include <functional>
 #include <cassert>
+#include <list>
 using namespace std;
 
 template<class T>
+
 class Tree
 {
     // The inner struct Node represents one node of the tree.  This defines the
@@ -146,6 +148,30 @@ public:
         visit(contents);
         right().inorder(visit);
     }
+    
+
+    //ASSIGNMENT 8 FUNCTION
+    void Listinorder(list<int>* myList)
+    {
+        if (isEmpty()) return;
+        left().Listinorder(myList);
+        T contents = root();
+        myList->push_back(contents);
+        right().Listinorder(myList);
+    }
+
+    //ASSIGNMENT 8 FUNCTION
+    void Listinreverse(list<int>* myListReverse)
+    {
+        if (isEmpty()) return;
+        right().Listinreverse(myListReverse);
+        T contents = root();
+        myListReverse->push_back(contents);
+        left().Listinreverse(myListReverse);
+    }
+
+
+
 
     void postorder(std::function<void(T)> visit) const {
         if (isEmpty()) return;
@@ -154,9 +180,6 @@ public:
         T contents = root();
         visit(contents);
     }
-
-  
-
 private:
     std::shared_ptr<const Node> _root;
 };
