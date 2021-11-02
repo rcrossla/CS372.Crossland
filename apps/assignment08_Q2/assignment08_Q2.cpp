@@ -22,6 +22,7 @@ struct tasks
 	bool operator<(const tasks& t) const { return priority < t.priority; }
 };
 
+
 int main()
 {
 	tasks checkList;

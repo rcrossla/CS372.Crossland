@@ -1,0 +1,5 @@
+1 U Lock the door 1
+2 U Wash the dishes 3
+3 U Turn off lights 2
+
+
